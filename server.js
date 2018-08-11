@@ -28,7 +28,6 @@ wss.on('connection', ws => {
 
 		switch (data.type) {
 		case 'ADD_USER': {
-			console.log(Object.keys(users));
 			i = Object.keys(users).reduce(function(a, b) {
 				return Math.max(a, b);
 			}, 0);
