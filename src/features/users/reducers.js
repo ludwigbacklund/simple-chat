@@ -5,17 +5,15 @@ export const UserShape = {
 };
 
 const INITIAL_STATE = {
-	users: { 1: { name: 'John' } }
+	users: {}
 };
-
-let id = 0;
 
 const users = (state = INITIAL_STATE, action) => {
 	switch (action.type) {
-	case 'ADD_USER':
+	case 'UPDATE_USERS':
 		return {
 			...state,
-			users: { ...state.users, [id++]: { name: action.name } }
+			users: action.users
 		};
 	default:
 		return state;

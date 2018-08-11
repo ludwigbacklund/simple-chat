@@ -1,6 +1,6 @@
-const addUser = name => ({
-	type: 'ADD_USER',
-	name
+const updateUsers = users => ({
+	type: 'UPDATE_USERS',
+	users
 });
 
-export { addUser };
+export { updateUsers };
