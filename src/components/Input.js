@@ -18,7 +18,10 @@ class Input extends Component {
 				placeholder="Write here..."
 				onChange={e => this.setState({ text: e.target.value })}
 				onKeyPress={e => {
-					if (e.key === 'Enter') onSubmit('John', text);
+					if (e.key === 'Enter') {
+						onSubmit('John', text);
+						this.setState({ text: '' });
+					}
 				}}
 				value={text}
 			/>
