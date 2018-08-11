@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import Messages from './components/Messages';
-import Message from './components/Message';
-import Input from './components/Input';
-import UserList from './components/UserList';
-import User from './components/User';
+import Messages from './Messages';
+import Message from './Message';
+import Input from './Input';
+import UserList from './UserList';
+import User from './User';
 
-import { MessageShape } from './features/chat/reducers';
-import { addMessageAndNotifySocket } from './features/chat/actions';
-import { UserShape } from './features/users/reducers';
+import { MessageShape } from '../features/chat/reducers';
+import { addMessageAndNotifySocket } from '../features/chat/actions';
+import { UserShape } from '../features/users/reducers';
 
 class App extends Component {
 	render() {
