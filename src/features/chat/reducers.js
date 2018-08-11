@@ -13,8 +13,19 @@ const INITIAL_STATE = {
 	]
 };
 
+let id = 2;
+
 const chat = (state = INITIAL_STATE, action) => {
 	switch (action.type) {
+	case 'ADD_MESSAGE':
+		return {
+			...state,
+			messages: state.messages.concat({
+				id: id++,
+				user: action.user,
+				content: action.content
+			})
+		};
 	default:
 		return state;
 	}
