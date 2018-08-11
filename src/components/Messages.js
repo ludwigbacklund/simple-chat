@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 import Message from './Message';
 
-const Messages = props => {
-	return <div>{props.children}</div>;
+const Messages = ({ children }) => {
+	return <div>{children}</div>;
 };
 
 Messages.propTypes = {
