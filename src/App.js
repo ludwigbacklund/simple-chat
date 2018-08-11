@@ -9,12 +9,12 @@ import UserList from './components/UserList';
 import User from './components/User';
 
 import { MessageShape } from './features/chat/reducers';
-import { addMessage } from './features/chat/actions';
+import { addMessageAndNotifySocket } from './features/chat/actions';
 import { UserShape } from './features/users/reducers';
 
 class App extends Component {
 	render() {
-		const { messages, users, addMessage } = this.props;
+		const { messages, users, addMessageAndNotifySocket } = this.props;
 
 		return (
 			<div>
@@ -28,7 +28,7 @@ class App extends Component {
 						/>
 					))}
 				</Messages>
-				<Input onSubmit={addMessage} />
+				<Input onSubmit={addMessageAndNotifySocket} />
 				<UserList>
 					{Object.entries(users).map(user => (
 						<User key={user[0]} name={user[1].name} />
@@ -42,7 +42,7 @@ class App extends Component {
 App.propTypes = {
 	messages: PropTypes.arrayOf(PropTypes.shape(MessageShape)),
 	users: PropTypes.objectOf(PropTypes.shape(UserShape)),
-	addMessage: PropTypes.func.isRequired
+	addMessageAndNotifySocket: PropTypes.func.isRequired
 };
 
 const mapState = state => ({
@@ -50,7 +50,7 @@ const mapState = state => ({
 	users: state.users.users
 });
 
-const mapActions = { addMessage };
+const mapActions = { addMessageAndNotifySocket };
 
 export default connect(
 	mapState,
