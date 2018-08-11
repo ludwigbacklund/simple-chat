@@ -1,5 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
+import { MessageShape } from '../features/chat/reducers';
 
 const Message = props => {
 	return (
@@ -9,9 +10,6 @@ const Message = props => {
 	);
 };
 
-Message.propTypes = {
-	user: PropTypes.string.isRequired,
-	content: PropTypes.string.isRequired
-};
+Message.propTypes = MessageShape;
 
 export default Message;
