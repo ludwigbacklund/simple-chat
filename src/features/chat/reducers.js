@@ -7,13 +7,10 @@ export const MessageShape = {
 };
 
 const INITIAL_STATE = {
-	messages: [
-		{ id: 0, user: 'John', content: 'Hello World' },
-		{ id: 1, user: 'Becky', content: 'Testing 1 2 3' }
-	]
+	messages: []
 };
 
-let id = 2;
+let id = 0;
 
 const chat = (state = INITIAL_STATE, action) => {
 	switch (action.type) {
