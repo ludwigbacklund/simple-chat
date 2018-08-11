@@ -1,9 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
 import User from './User';
+import Header from './styled/Header';
+
+const Wrapper = styled.div`
+	flex: 1;
+	text-align: center;
+`;
 
 const UserList = ({ children }) => {
-	return <div>{children}</div>;
+	return (
+		<Wrapper>
+			<Header>Participants</Header>
+			{children}
+		</Wrapper>
+	);
 };
 
 UserList.propTypes = {
