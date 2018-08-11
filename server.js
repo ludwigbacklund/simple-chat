@@ -28,7 +28,11 @@ wss.on('connection', ws => {
 
 		switch (data.type) {
 		case 'ADD_USER': {
-			i = Math.max(Object.keys(users));
+			console.log(Object.keys(users));
+			i = Object.keys(users).reduce(function(a, b) {
+				return Math.max(a, b);
+			}, 0);
+
 			users = { ...users, [i + 1]: { name: data.name, ws: ws } };
 			const usersWithoutSocket = getUsersWithoutSocket(users);
 
@@ -61,7 +65,8 @@ wss.on('connection', ws => {
 		const userToRemove = Object.entries(users).filter(
 			user => user[1].ws === ws
 		);
-		const removeIndex = userToRemove[0][0] ? userToRemove[0][0] : null;
+		const removeIndex = userToRemove ? userToRemove[0][0] : null;
+
 		if (removeIndex) delete users[removeIndex];
 
 		const usersWithoutSocket = getUsersWithoutSocket(users);
