@@ -19,7 +19,7 @@ class Input extends Component {
 				onChange={e => this.setState({ text: e.target.value })}
 				onKeyPress={e => {
 					if (e.key === 'Enter') {
-						onSubmit('John', text);
+						onSubmit('Me', text);
 						this.setState({ text: '' });
 					}
 				}}
