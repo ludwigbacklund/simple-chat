@@ -15,9 +15,11 @@ import { UserShape } from '../features/users/reducers';
 import Header from './styled/Header';
 
 const MainWrapper = styled.div`
+	background: linear-gradient(to bottom, #ec6f66, #f3a183);
 	width: 100%;
 	display: flex;
 	justify-content: center;
+	font-family: 'Open Sans', Verdana, Helvetica, sans-serif;
 `;
 
 const AppWrapper = styled.div`
@@ -40,6 +42,7 @@ const ChatWrapper = styled.div`
 	flex-direction: column;
 	flex: 6;
 	overflow-x: hidden;
+	margin: 15px 0px 5px 0px;
 `;
 
 const MessagesWrapper = styled.div`
@@ -62,7 +65,7 @@ class App extends Component {
 						))}
 					</UserList>
 					<ChatWrapper>
-						<Header>Blocket Chat</Header>
+						<Header bold>Blocket Chat</Header>
 						<MessagesWrapper>
 							<Messages>
 								{messages.map(message => (
