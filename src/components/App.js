@@ -38,7 +38,7 @@ const AppWrapper = styled.div`
 const ChatWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
-	flex: 3;
+	flex: 6;
 	overflow-x: hidden;
 `;
 

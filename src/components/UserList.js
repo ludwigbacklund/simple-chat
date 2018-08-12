@@ -6,8 +6,16 @@ import Header from './styled/Header';
 import componentPropType from '../utils/componentPropType';
 
 const Wrapper = styled.div`
-	flex: 1;
 	text-align: center;
+	overflow-y: overlay;
+
+	@media (max-width: 900px) {
+		flex: 3;
+	}
+
+	@media (min-width: 900px) {
+		flex: 2;
+	}
 `;
 
 const UserList = ({ children }) => {
