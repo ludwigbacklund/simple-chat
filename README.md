@@ -8,6 +8,8 @@ A simple chat client & WebSocket server for local chatting. Open up the client i
 
 `Node` (tested with v.10.8.0)
 
+A browser (tested with `Google Chrome` v.67.0.3396.87)
+
 ## Quick start
 
 Run `yarn` or `npm install` to install all project dependencies
