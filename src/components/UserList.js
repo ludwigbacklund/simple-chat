@@ -8,6 +8,7 @@ import componentPropType from '../utils/componentPropType';
 const Wrapper = styled.div`
 	text-align: center;
 	overflow-y: overlay;
+	margin-top: 25px;
 
 	@media (max-width: 900px) {
 		flex: 3;
@@ -21,7 +22,7 @@ const Wrapper = styled.div`
 const UserList = ({ children }) => {
 	return (
 		<Wrapper>
-			<Header>Users</Header>
+			<Header small>USERS</Header>
 			{children}
 		</Wrapper>
 	);
