@@ -7,12 +7,15 @@ const Wrapper = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	margin: 10px 10px 0px 10px;
-	font-family: 'Open Sans', Verdana, Helvetica, sans-serif;
+
+	@media (max-width: 900px) {
+		font-size: 0.8em;
+	}
 `;
 
 const Name = styled.span`
-	margin-right: 10px;
 	color: rgb(237, 66, 83);
+	margin-right: 5px;
 `;
 
 const Content = styled.span`
