@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 
 import { MessageShape } from '../features/chat/reducers';
@@ -15,14 +15,18 @@ const Name = styled.span`
 	color: rgb(237, 66, 83);
 `;
 
-const Message = props => {
-	return (
-		<Wrapper>
-			<Name>{props.user}:</Name>
-			<p>{props.content}</p>
-		</Wrapper>
-	);
-};
+class Message extends PureComponent {
+	render() {
+		const { user, content } = this.props;
+
+		return (
+			<Wrapper>
+				<Name>{user}:</Name>
+				<p>{content}</p>
+			</Wrapper>
+		);
+	}
+}
 
 Message.propTypes = MessageShape;
 
