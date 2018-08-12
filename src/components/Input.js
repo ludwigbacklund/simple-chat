@@ -6,10 +6,16 @@ const ChatInput = styled.textarea`
 	align-self: flex-end;
 	flex: 1;
 	width: 100%;
-	margin-top: 5px;
-	resize: none;
+	margin-top: 10px;
+	padding: 5px;
+	border-radius: 5px;
 	box-shadow: rgba(0, 0, 0, 0.14) -1px 1px 2px 1px;
+	resize: none;
 	border: none;
+
+	@media (min-width: 900px) {
+		font-size: 1em;
+	}
 `;
 
 class Input extends Component {
