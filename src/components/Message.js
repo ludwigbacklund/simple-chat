@@ -5,7 +5,7 @@ import { MessageShape } from '../features/chat/reducers';
 
 const Wrapper = styled.div`
 	display: flex;
-	flex-wrap: wrap;
+
 	margin: 10px 10px 0px 10px;
 	font-family: 'Open Sans', Verdana, Helvetica, sans-serif;
 `;
@@ -15,6 +15,10 @@ const Name = styled.span`
 	color: rgb(237, 66, 83);
 `;
 
+const Content = styled.span`
+	word-break: break-all;
+`;
+
 class Message extends PureComponent {
 	render() {
 		const { user, content } = this.props;
@@ -22,7 +26,7 @@ class Message extends PureComponent {
 		return (
 			<Wrapper>
 				<Name>{user}:</Name>
-				<p>{content}</p>
+				<Content>{content}</Content>
 			</Wrapper>
 		);
 	}
