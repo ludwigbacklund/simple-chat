@@ -5,7 +5,7 @@ import { MessageShape } from '../features/chat/reducers';
 
 const Wrapper = styled.div`
 	display: flex;
-
+	flex-wrap: wrap;
 	margin: 10px 10px 0px 10px;
 	font-family: 'Open Sans', Verdana, Helvetica, sans-serif;
 `;
