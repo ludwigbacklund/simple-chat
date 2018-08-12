@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Message from './Message';
+import componentPropType from '../utils/componentPropType';
 
 const Wrapper = styled.div`
 	flex: 10;
@@ -40,10 +40,7 @@ class Messages extends Component {
 }
 
 Messages.propTypes = {
-	children: PropTypes.oneOfType([
-		PropTypes.arrayOf(Message),
-		PropTypes.objectOf(Message)
-	])
+	children: componentPropType(Message)
 };
 
 export default Messages;

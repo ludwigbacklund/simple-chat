@@ -1,9 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import User from './User';
 import Header from './styled/Header';
+import componentPropType from '../utils/componentPropType';
 
 const Wrapper = styled.div`
 	flex: 1;
@@ -20,10 +20,7 @@ const UserList = ({ children }) => {
 };
 
 UserList.propTypes = {
-	children: PropTypes.oneOfType([
-		PropTypes.arrayOf(User),
-		PropTypes.objectOf(User)
-	])
+	children: componentPropType(User)
 };
 
 export default UserList;
