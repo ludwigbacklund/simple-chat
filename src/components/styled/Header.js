@@ -5,7 +5,7 @@ const Header = styled.span`
 	font-family: 'Open Sans', Verdana, Helvetica, sans-serif;
 
 	@media (max-width: 900px) {
-		font-size: 1.2em;
+		font-size: 1em;
 	}
 
 	@media (min-width: 900px) {
