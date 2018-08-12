@@ -1,8 +1,10 @@
 import { addMessage } from '../features/chat/actions';
 import { updateUsers } from '../features/users/actions';
 
+const IP = '127.0.0.1';
+
 const initSocket = (dispatch, name) => {
-	const socket = new WebSocket('ws://localhost:3001');
+	const socket = new WebSocket(`ws://${IP}:3001`);
 
 	socket.onopen = () => {
 		socket.send(
