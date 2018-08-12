@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -21,13 +21,17 @@ const Name = styled.div`
 	}
 `;
 
-const User = ({ name }) => {
-	return (
-		<Wrapper>
-			<Name>{name}</Name>
-		</Wrapper>
-	);
-};
+class User extends PureComponent {
+	render() {
+		const { name } = this.props;
+
+		return (
+			<Wrapper>
+				<Name>{name}</Name>
+			</Wrapper>
+		);
+	}
+}
 
 User.propTypes = {
 	name: PropTypes.string
