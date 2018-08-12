@@ -17,11 +17,14 @@ const chat = (state = INITIAL_STATE, action) => {
 	case 'ADD_MESSAGE':
 		return {
 			...state,
-			messages: state.messages.concat({
-				id: id++,
-				user: action.user,
-				content: action.content
-			})
+			messages: [
+				...state.messages,
+				{
+					id: id++,
+					user: action.user,
+					content: action.content
+				}
+			]
 		};
 	default:
 		return state;
