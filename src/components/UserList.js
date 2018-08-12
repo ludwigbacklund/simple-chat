@@ -21,7 +21,7 @@ const Wrapper = styled.div`
 const UserList = ({ children }) => {
 	return (
 		<Wrapper>
-			<Header>Participants</Header>
+			<Header>Users</Header>
 			{children}
 		</Wrapper>
 	);
